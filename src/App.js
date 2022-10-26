@@ -10,9 +10,6 @@ function App() {
           <li>
             <NavLink to="/">HomePage</NavLink>
           </li>
-          {/* <li>
-            <NavLink to="/home/dock">Dock</NavLink>
-          </li> */}
           <li>
             <NavLink to="/marketplace">MarketplacePage</NavLink>
           </li>
@@ -41,18 +38,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <Routes>
-<Route path="/" element={<h2>Layout</h2>}>
-  <Route index element={<h2>HomePage</h2>}>
-    <Route index element={<h2>Dock</h2>} />
-    <Route path="undock" element={<h2>Undock</h2>} />
-  </Route>
-  <Route path="marketplace" element={<h2>MarketplacePage</h2>} />
-  <Route path="settings" element={<h2>SettingsPage</h2>} />
-  <Route path="help" element={<h2>HelpPage</h2>} />
-  <Route path="*" element={<h2>NotFound</h2>} />
-</Route>
-</Routes> */
-}
