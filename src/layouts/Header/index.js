@@ -5,7 +5,10 @@ import header_logo from '../../assets/images/header_logo.svg';
 const Header = () => {
   return (
     <header className="header">
-      <ReactSVG src={header_logo} className="header__logo" />
+      <a href="/">
+        <ReactSVG src={header_logo} className="header__logo" />
+      </a>
+
       <div className="header__registration">
         <p className="header__account">motzart.near</p>
         <button
