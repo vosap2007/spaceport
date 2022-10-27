@@ -1,10 +1,14 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
-import './App.css';
-import { HomePage } from './pages/HomePage';
+import Layout from './layouts/Layout';
+import HomePage from './pages/HomePage';
+import MarketplacePage from './pages/MarketplacePage';
+import SettingsPage from './pages/SettingsPage';
+import HelpPage from './pages/HelpPage';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <>
+    <Layout>
       <nav>
         <ul>
           <li>
@@ -28,12 +32,12 @@ function App() {
           <Route path="undock" element={<h2>Undock</h2>} />
         </Route>
 
-        <Route path="/marketplace" element={<h2>MarketplacePage</h2>} />
-        <Route path="/settings" element={<h2>SettingsPage</h2>} />
-        <Route path="/help" element={<h2>HelpPage</h2>} />
-        <Route path="*" element={<h2>NotFound</h2>} />
+        <Route path="/marketplace" element={<MarketplacePage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </Layout>
   );
 }
 
