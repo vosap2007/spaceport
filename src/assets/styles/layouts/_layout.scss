@@ -1,7 +1,6 @@
 html,
 body {
   height: 100vh;
-  background-color: black;
 }
 
 [id='root'] {
@@ -11,7 +10,6 @@ body {
 .layout {
   display: flex;
   flex-direction: column;
-  background-color: $black;
   min-height: 100%;
 
   &__content {
@@ -20,8 +18,6 @@ body {
     max-width: 1250px;
     width: 100%;
 
-    @include container;
-    padding-bottom: 24px !important;
-    padding-top: 24px !important;
+    padding: 70px 25px 55px 25px;
   }
 }

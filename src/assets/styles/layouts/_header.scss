@@ -4,18 +4,49 @@
   left: 0;
   width: 100%;
   max-width: 1680px;
+  height: 70px;
   z-index: 110;
-  background-color: black;
   margin: 0 auto;
-  color: aqua;
+  padding: 16px 80px;
+  color: $basic;
+  background: $black;
 
-  &::after {
-    z-index: 1;
-    content: '';
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid brown;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    // display: flex;
+    // align-items: center;
+  }
+
+  &__registration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 21px;
+  }
+
+  &__account {
+    font-family: 'Bai Jamjuree';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  &__sign_out {
+    width: 120px;
+    height: 38px;
+    background: #78ded4;
+    border-radius: 6px;
+    padding: 9px 30px;
+
+    font-family: 'Bai Jamjuree';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    color: #1e1e1e;
   }
 }

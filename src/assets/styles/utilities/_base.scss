@@ -1,25 +1,18 @@
 * {
   box-sizing: border-box;
-  background: black;
 }
 
 html {
   font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: white;
+  font-size: 18px;
+  line-height: 27px;
+  color: $black;
   font-weight: 400;
-  font-family: 'ProximaNova';
-  background: black;
+  font-family: 'Bai Jamjuree';
 }
 
 body {
   z-index: 1;
-  background: black;
-}
-
-input:focus {
-  color: white;
 }
 
 svg {

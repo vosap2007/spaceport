@@ -4,11 +4,10 @@
 // utilities
 @import './utilities/reset';
 @import './utilities/variables';
-@import './utilities/mixins';
 @import './utilities/base';
 
 // layout
-// @import './layouts/layout';
+@import './layouts/layout';
 @import './layouts/header';
 
 // components
