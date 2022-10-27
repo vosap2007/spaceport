@@ -1,0 +1,49 @@
+.side_bar {
+  width: 323px;
+  height: auto;
+  background: $basic;
+  padding: 47px 36px;
+
+  &__logo {
+    display: flex;
+    margin-bottom: 56px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: auto;
+    height: 64px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    transition: 0.3s all ease-in-out;
+    color: #000000;
+
+    &__selected {
+      background: rgba(255, 255, 255, 0.33);
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.33);
+    }
+  }
+}

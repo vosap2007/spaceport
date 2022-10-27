@@ -36,13 +36,19 @@
   &__sign_out {
     width: 120px;
     height: 38px;
-    background: #78ded4;
+    background: $basic;
     border-radius: 6px;
-    padding: 9px 30px;
-
     font-weight: 500;
     font-size: 15px;
     line-height: 19px;
     color: #1e1e1e;
+    border: 1px solid $black;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      background: $black;
+      color: $basic;
+      border: 1px solid $basic;
+    }
   }
 }

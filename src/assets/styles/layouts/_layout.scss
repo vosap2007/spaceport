@@ -13,11 +13,10 @@ body {
   min-height: 100%;
 
   &__content {
+    display: flex;
     flex: 1 0 auto;
     margin: 0 auto;
     max-width: 1250px;
     width: 100%;
-
-    padding: 70px 25px 55px 25px;
   }
 }
