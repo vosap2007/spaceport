@@ -1,3 +1,5 @@
+import React from 'react';
+import { useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { ReactSVG } from 'react-svg';
 import side_bar_logo from '../../assets/images/Group.svg';
@@ -16,6 +18,8 @@ const dataSideBar = [
 ];
 
 const SideBar = () => {
+  const location = useLocation().pathname;
+
   return (
     <div className="side_bar">
       <p className="side_bar__logo">
@@ -27,12 +31,14 @@ const SideBar = () => {
       <nav>
         <ul className="side_bar__list">
           {dataSideBar.map(({ route, img, name }) => {
+            const isSideBar =
+              (location === '/' || location === '/undock') && name === 'Home';
             return (
               <li key={name}>
                 <NavLink
                   to={route}
-                  className={(isActive) =>
-                    !isActive
+                  className={({ isActive }) =>
+                    isSideBar || isActive
                       ? 'side_bar__link side_bar__link__selected'
                       : 'side_bar__link '
                   }
