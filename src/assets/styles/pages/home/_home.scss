@@ -1,6 +1,6 @@
 .home {
   position: relative;
-  padding: 34px 40px;
+  padding: 55px 25px;
   width: 100%;
 
   &__title {
@@ -42,7 +42,7 @@
       z-index: 1;
       content: '';
       position: absolute;
-      top: 90px;
+      top: 112px;
       left: 0px;
       width: 100%;
       border-top: 2px solid $basic;

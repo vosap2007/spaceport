@@ -46,11 +46,26 @@
   &__checkbox_box {
     display: flex;
     align-items: center;
+    width: fit-content;
+    cursor: pointer;
+
+    svg {
+      margin-right: 11px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 12px;
+    left: 33px;
+
+    &__display {
+      display: none;
+    }
   }
 
   &__checkbox {
     margin-right: 11px;
-    cursor: pointer;
   }
 
   &__button {
