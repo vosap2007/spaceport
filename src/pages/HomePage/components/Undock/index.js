@@ -3,7 +3,7 @@ import React from 'react';
 const Undock = () => {
   return (
     <>
-      <h1>Undock</h1>
+      <h1>Undock content</h1>
     </>
   );
 };

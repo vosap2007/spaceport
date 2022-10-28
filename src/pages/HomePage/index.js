@@ -1,22 +1,18 @@
 import React from 'react';
-import Dock from './components/Dock';
-import Undock from './components/Undock';
 import { NavLink, Outlet } from 'react-router-dom';
 
 const HomePage = () => {
   return (
-    <>
-      <h1>HomePage</h1>
-      <br />
-      <NavLink to="/">
-        <Dock />
-      </NavLink>
-      <br />
-      <NavLink to="/undock">
-        <Undock />
-      </NavLink>
-      <Outlet />
-    </>
+    <div className="home">
+      <h1 className="home__title">Home</h1>
+      <div className="home__menu">
+        <NavLink to="/">Dock</NavLink>
+        <NavLink to="/undock">Undock</NavLink>
+      </div>
+      <div className="home__content">
+        <Outlet />
+      </div>
+    </div>
   );
 };
 

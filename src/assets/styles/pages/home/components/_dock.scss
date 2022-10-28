@@ -1,0 +1,77 @@
+.dock {
+  position: relative;
+  transition: 0.3s all ease-in-out;
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 28px;
+
+    &::after {
+      z-index: 1;
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 0px;
+      width: 100%;
+      border-top: 2px solid $basic;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 28px;
+
+    &__bold {
+      font-weight: 700;
+    }
+  }
+
+  &__check_box {
+    border: 2px solid $basic;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    padding: 30px 27px 40px 27px;
+
+    &__bold {
+      font-weight: 700;
+    }
+  }
+
+  &__attention {
+    margin-bottom: 15px;
+  }
+
+  &__checkbox_box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    margin-right: 11px;
+    cursor: pointer;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 7px 28px;
+    width: 400px;
+    background: #78ded4;
+    border: 2px solid #78ded4;
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      background: #78ded400;
+      border: 2px solid #78ded4;
+    }
+  }
+}
