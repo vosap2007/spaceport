@@ -2,6 +2,7 @@
   position: relative;
   padding: 55px 25px;
   width: 100%;
+  overflow: auto;
 
   &__title {
     font-size: 48px;
@@ -68,5 +69,6 @@
     border: 2px solid $basic;
     border-radius: 3px;
     padding: 34px 42px;
+    height: 100%;
   }
 }
