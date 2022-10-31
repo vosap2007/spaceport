@@ -41,6 +41,7 @@ const Dock = () => {
           <p>I understand and wish to proceed</p>
         </div>
       </div>
+
       <button
         className="dock__button"
         onClick={() => {

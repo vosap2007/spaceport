@@ -1,5 +1,8 @@
 .undock {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: 0.3s all ease-in-out;
 
   &__title {
@@ -51,6 +54,10 @@
   &__button {
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0 auto;
     padding: 7px 28px;
     width: 400px;
