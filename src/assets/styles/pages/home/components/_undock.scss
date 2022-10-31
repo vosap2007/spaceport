@@ -1,0 +1,72 @@
+.undock {
+  position: relative;
+  transition: 0.3s all ease-in-out;
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 28px;
+
+    &::after {
+      z-index: 1;
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 0px;
+      width: 100%;
+      border-top: 2px solid $basic;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 28px;
+
+    &__bold {
+      font-weight: 700;
+    }
+  }
+
+  &__following {
+    list-style: inside;
+
+    &__happy {
+      margin-left: 24px;
+    }
+  }
+
+  &__title2 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  &__launch {
+    list-style: inside;
+    margin-bottom: 60px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 7px 28px;
+    width: 400px;
+    background: #78ded4;
+    border: 2px solid #78ded4;
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      background: #78ded400;
+      border: 2px solid #78ded4;
+    }
+  }
+}
