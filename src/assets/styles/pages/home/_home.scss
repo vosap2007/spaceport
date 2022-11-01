@@ -1,8 +1,10 @@
 .home {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 55px 25px;
   width: 100%;
-  overflow: auto;
+  // overflow: auto;
 
   &__title {
     font-size: 48px;
