@@ -1,5 +1,7 @@
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './layouts/Layout';
+import AutorisationPage from './pages/Autorisation';
 import HomePage from './pages/HomePage';
 import EcosystemPage from './pages/EcosystemPage';
 import MarketplacePage from './pages/MarketplacePage';
@@ -11,12 +13,26 @@ import Undock from './pages/HomePage/components/Undock';
 import SideBar from './components/SideBar';
 
 function App() {
+  const [isAuthorized, setIsAuthorized] = useState(false);
+
   return (
-    <Layout>
-      <SideBar />
+    <Layout isAuthorized={isAuthorized} setIsAuthorized={setIsAuthorized}>
+      {isAuthorized && <SideBar />}
 
       <Routes>
-        <Route path="/" element={<HomePage />}>
+        <Route
+          path="/"
+          element={
+            isAuthorized ? (
+              <HomePage />
+            ) : (
+              <AutorisationPage
+                isAuthorized={isAuthorized}
+                setIsAuthorized={setIsAuthorized}
+              />
+            )
+          }
+        >
           <Route index element={<Dock />} />
           <Route path="undock" element={<Undock />} />
         </Route>

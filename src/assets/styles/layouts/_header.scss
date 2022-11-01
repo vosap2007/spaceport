@@ -34,8 +34,10 @@
   }
 
   &__sign_out {
-    width: 120px;
+    display: flex;
+    align-items: center;
     height: 38px;
+    padding: 10px 21px;
     background: $basic;
     border-radius: 6px;
     font-weight: 500;
