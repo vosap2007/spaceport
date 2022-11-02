@@ -2,13 +2,21 @@ import React, { useState } from 'react';
 import { ReactSVG } from 'react-svg';
 import rectangle from '../../../../assets/images/rectangle.svg';
 import check_marker from '../../../../assets/images/check_mark.svg';
+import Modal from '../../../../components/Modal';
+import AccountSelection from './AccountSelection';
 
 const Dock = () => {
   const [checked, setChecked] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
 
-  function chengeCheckbox() {
+  const chengeCheckbox = () => {
     setChecked(!checked);
-  }
+  };
+
+  const connectAccount = () => {
+    checked && setIsOpened(!isOpened);
+    checked && setChecked(!checked);
+  };
 
   return (
     <div className="dock">
@@ -32,7 +40,6 @@ const Dock = () => {
           type="checkbox"
           onClick={chengeCheckbox}
         >
-          {/* <input className="dock__checkbox" /> */}
           <ReactSVG src={rectangle} />
           <img
             src={check_marker}
@@ -42,11 +49,19 @@ const Dock = () => {
         </div>
       </div>
 
+      <Modal
+        isOpened={isOpened}
+        setIsOpened={setIsOpened}
+        titleModal={'Account Selection'}
+      >
+        <AccountSelection />
+      </Modal>
+
       <button
-        className="dock__button"
-        onClick={() => {
-          console.log('click button Connect an Account');
-        }}
+        className={`dock__button ${
+          checked ? 'dock__button__connect' : 'dock__button__disconnect'
+        }`}
+        onClick={connectAccount}
       >
         Connect an Account
       </button>
