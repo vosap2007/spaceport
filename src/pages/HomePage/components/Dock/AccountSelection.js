@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import { ReactSVG } from 'react-svg';
+import rectangle_write from '../../../../assets/images/rectangle_write.svg';
+import checkmark_white from '../../../../assets/images/checkmark-white.svg';
+import arrow from '../../../../assets/images/arrow.svg';
 
 const AccountSelection = () => {
   const [value, setValue] = useState('');
+  const [checked, setChecked] = useState(false);
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -11,7 +16,14 @@ const AccountSelection = () => {
     event.preventDefault();
     console.log(value);
     setValue('');
+    checked && setChecked(!checked);
   };
+
+  const chengeCheckbox = () => {
+    setChecked(!checked);
+  };
+
+  // const resCheck = () => {};
 
   return (
     <div className="dock__account">
@@ -23,20 +35,41 @@ const AccountSelection = () => {
         recovery process.
       </p>
       <form onSubmit={handleSubmit}>
-        <input
+        <textarea
           type="text"
-          required
           value={value}
           onChange={handleChange}
           className="dock__account__input"
           placeholder="Enter seed phrase"
-        ></input>
-        <p>sjdhfbsjdfhbskdjhbf</p>
-        <input
-          className="dock__account__button"
+        ></textarea>
+        <div
+          className="dock__checkbox_box"
+          type="checkbox"
+          onClick={chengeCheckbox}
+        >
+          <ReactSVG src={rectangle_write} />
+          <img
+            src={checkmark_white}
+            className={checked ? 'dock__img_write' : 'dock__img_write__display'}
+          />
+          <p>
+            I want to grant full access and transfer all assets to SPACEPORT
+            from the selected account.
+          </p>
+        </div>
+
+        <button
+          className={`dock__account__button ${
+            checked && value.length > 0
+              ? 'dock__account__button__connect'
+              : 'dock__account__button__disconnect'
+          }`}
+          disabled={checked && value.length > 0 ? false : true}
           type="submit"
-          value="Отправить"
-        />
+        >
+          Dock Account
+          <ReactSVG src={arrow} />
+        </button>
       </form>
     </div>
   );
