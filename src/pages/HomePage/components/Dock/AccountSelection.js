@@ -23,8 +23,6 @@ const AccountSelection = () => {
     setChecked(!checked);
   };
 
-  // const resCheck = () => {};
-
   return (
     <div className="dock__account">
       <p className="dock__account__title">
@@ -48,7 +46,7 @@ const AccountSelection = () => {
           onClick={chengeCheckbox}
         >
           <ReactSVG src={rectangle_write} />
-          <img
+          <ReactSVG
             src={checkmark_white}
             className={checked ? 'dock__img_write' : 'dock__img_write__display'}
           />
