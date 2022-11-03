@@ -7,6 +7,7 @@ import AccountSelection from './AccountSelection';
 import Processing from './Processing';
 import DockingSuccessful from './DockingSuccessful';
 import WelcomeSpaceport from './WelcomeSpaceport';
+import Error from './Error';
 
 const Dock = () => {
   const [checked, setChecked] = useState(false);
@@ -57,12 +58,14 @@ const Dock = () => {
         setIsOpened={setIsOpened}
         // titleModal={'Account Selection'}
         // titleModal={'Processing...'}
-        titleModal={'Docking Successful'}
+        // titleModal={'Docking Successful'}
+        titleModal={'Error: Docking Failed'}
       >
         {/* <AccountSelection /> */}
         {/* <Processing /> */}
         {/* <DockingSuccessful /> */}
-        <WelcomeSpaceport />
+        {/* <WelcomeSpaceport /> */}
+        <Error />
       </Modal>
 
       <button
