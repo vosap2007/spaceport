@@ -4,6 +4,9 @@ import rectangle from '../../../../assets/images/rectangle.svg';
 import check_marker from '../../../../assets/images/check_mark.svg';
 import Modal from '../../../../components/Modal';
 import AccountSelection from './AccountSelection';
+import Processing from './Processing';
+import DockingSuccessful from './DockingSuccessful';
+import WelcomeSpaceport from './WelcomeSpaceport';
 
 const Dock = () => {
   const [checked, setChecked] = useState(false);
@@ -52,9 +55,14 @@ const Dock = () => {
       <Modal
         isOpened={isOpened}
         setIsOpened={setIsOpened}
-        titleModal={'Account Selection'}
+        // titleModal={'Account Selection'}
+        // titleModal={'Processing...'}
+        titleModal={'Docking Successful'}
       >
-        <AccountSelection />
+        {/* <AccountSelection /> */}
+        {/* <Processing /> */}
+        {/* <DockingSuccessful /> */}
+        <WelcomeSpaceport />
       </Modal>
 
       <button

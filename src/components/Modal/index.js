@@ -3,8 +3,8 @@ import { ReactSVG } from 'react-svg';
 import arrow from '../../assets/images/arrow.svg';
 
 const Modal = ({ isOpened, setIsOpened, titleModal, children }) => {
-  const [showBack, setShowBack] = useState(true);
-  const [showExit, setShowExit] = useState(true);
+  const [showBack, setShowBack] = useState(false);
+  const [showExit, setShowExit] = useState(false);
 
   isOpened
     ? (document.body.style.overflow = 'hidden')
