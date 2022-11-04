@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../../../../components/Modal';
+import AccountSelection from './AccountSelection';
 import TermsConditions from './TermsConditions';
 
 const Undock = () => {
@@ -40,9 +41,11 @@ const Undock = () => {
       <Modal
         isOpened={isOpened}
         setIsOpened={setIsOpened}
-        titleModal={'Terms & Conditions'}
+        // titleModal={'Terms & Conditions'}
+        titleModal={'Account Selection'}
       >
-        <TermsConditions />
+        {/* <TermsConditions /> */}
+        <AccountSelection />
       </Modal>
 
       <button
