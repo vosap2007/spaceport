@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { ReactSVG } from 'react-svg';
-import rectangle_write from '../../../../assets/images/rectangle_write.svg';
-import checkmark_white from '../../../../assets/images/checkmark-white.svg';
 import arrow from '../../../../assets/images/arrow.svg';
 import road_selection from '../../../../assets/images/road_selection.svg';
 import AccountList from './AccountList';
 
 const dataAccounts = [
   { name: 'account.near' },
-  { name: 'royo.near' },
+  { name: 'rgfgdfgdfgdfgdfgdfgdfgdoyo.near' },
   { name: 'igor.near' },
   { name: 'ozymandius.near' },
   { name: 'motzart.near' },
@@ -22,7 +20,7 @@ const AccountSelection = () => {
       <p className="undock__selection__title">
         Select the account you wish to Undock
       </p>
-      <ul>
+      <ul className="undock__selection__accounts">
         {dataAccounts.map(({ name }, idx) => {
           return (
             <AccountList

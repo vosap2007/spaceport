@@ -1,24 +1,11 @@
-import React, { useState } from 'react';
-import { ReactSVG } from 'react-svg';
-import rectangle_write from '../../../../assets/images/rectangle_write.svg';
-import checkmark_white from '../../../../assets/images/checkmark-white.svg';
-import arrow from '../../../../assets/images/arrow.svg';
-import road_selection from '../../../../assets/images/road_selection.svg';
-
-const dataAccounts = [
-  { name: 'account.near' },
-  { name: 'royo.near' },
-  { name: 'igor.near' },
-  { name: 'ozymandius.near' },
-  { name: 'motzart.near' },
-];
+import React from 'react';
 
 const AccountList = ({ name, accountChecked, setAccountChecked, idx }) => {
-  const [checked, setChecked] = useState(false);
-
   return (
     <li
-      className="undock__checkbox_box"
+      className={`undock__selection__checkbox ${
+        idx === accountChecked && 'undock__selection__checkbox__check'
+      }`}
       type="checkbox"
       onClick={() => {
         accountChecked !== idx
@@ -27,15 +14,14 @@ const AccountList = ({ name, accountChecked, setAccountChecked, idx }) => {
       }}
       checked={idx === accountChecked}
     >
-      <ReactSVG src={rectangle_write} />
-      <ReactSVG
-        src={checkmark_white}
+      <div className="undock__selection__write_circle"></div>
+      <div
         className={
           idx === accountChecked
-            ? 'undock__img_write'
-            : 'undock__img_write__display'
+            ? 'undock__selection__dark_circle'
+            : 'undock__selection__dark_circle__display'
         }
-      />
+      ></div>
       <p>{name}</p>
     </li>
   );
