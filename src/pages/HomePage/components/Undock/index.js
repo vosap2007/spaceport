@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../../../../components/Modal';
 import AccountSelection from './AccountSelection';
 import TermsConditions from './TermsConditions';
+import UndockSpaceport from './UndockSpaceport';
 
 const Undock = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -42,10 +43,12 @@ const Undock = () => {
         isOpened={isOpened}
         setIsOpened={setIsOpened}
         // titleModal={'Terms & Conditions'}
-        titleModal={'Account Selection'}
+        // titleModal={'Account Selection'}
+        titleModal={'Undock From SPACEPORT'}
       >
         {/* <TermsConditions /> */}
-        <AccountSelection />
+        {/* <AccountSelection /> */}
+        <UndockSpaceport />
       </Modal>
 
       <button
