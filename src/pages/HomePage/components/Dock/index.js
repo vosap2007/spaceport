@@ -57,15 +57,15 @@ const Dock = () => {
         isOpened={isOpened}
         setIsOpened={setIsOpened}
         // titleModal={'Account Selection'}
-        // titleModal={'Processing...'}
+        titleModal={'Processing...'}
         // titleModal={'Docking Successful'}
-        titleModal={'Error: Docking Failed'}
+        // titleModal={'Error: Docking Failed'}
       >
         {/* <AccountSelection /> */}
-        {/* <Processing /> */}
+        <Processing />
         {/* <DockingSuccessful /> */}
         {/* <WelcomeSpaceport /> */}
-        <Error />
+        {/* <Error /> */}
       </Modal>
 
       <button

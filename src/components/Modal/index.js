@@ -3,7 +3,7 @@ import { ReactSVG } from 'react-svg';
 import arrow from '../../assets/images/arrow.svg';
 
 const Modal = ({ isOpened, setIsOpened, titleModal, children }) => {
-  const [showBack, setShowBack] = useState(false);
+  const [showBack, setShowBack] = useState(true);
   const [showExit, setShowExit] = useState(true);
 
   isOpened

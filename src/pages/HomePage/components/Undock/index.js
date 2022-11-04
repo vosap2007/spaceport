@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from '../../../../components/Modal';
+import TermsConditions from './TermsConditions';
 
 const Undock = () => {
+  const [isOpened, setIsOpened] = useState(false);
+
   return (
     <div className="undock">
       <h1 className="undock__title">Undocking Your SPACEPORT Account</h1>
@@ -33,10 +37,18 @@ const Undock = () => {
         <li>Confirm undock</li>
       </ul>
 
+      <Modal
+        isOpened={isOpened}
+        setIsOpened={setIsOpened}
+        titleModal={'Terms & Conditions'}
+      >
+        <TermsConditions />
+      </Modal>
+
       <button
         className="undock__button"
         onClick={() => {
-          console.log('click button Proceed to Terms & Conditions');
+          setIsOpened(!isOpened);
         }}
       >
         Proceed to Terms & Conditions
