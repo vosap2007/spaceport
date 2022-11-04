@@ -15,15 +15,7 @@ const dataAccounts = [
 ];
 
 const AccountSelection = () => {
-  const [accountChecked, setAccountChecked] = useState(false);
-
-  // const chengeCheckbox = () => {
-  //   setChecked(!checked);
-  // };
-
-  const onDisabled = () => {
-    accountChecked && true;
-  };
+  const [accountChecked, setAccountChecked] = useState(null);
 
   return (
     <div className="undock__selection">
@@ -31,12 +23,14 @@ const AccountSelection = () => {
         Select the account you wish to Undock
       </p>
       <ul>
-        {dataAccounts.map(({ name }) => {
+        {dataAccounts.map(({ name }, idx) => {
           return (
             <AccountList
               name={name}
+              key={idx}
+              accountChecked={accountChecked}
               setAccountChecked={setAccountChecked}
-              onDisabled={onDisabled}
+              idx={idx}
             />
           );
         })}
@@ -44,7 +38,7 @@ const AccountSelection = () => {
 
       <button
         className={`undock__selection__button ${
-          accountChecked
+          accountChecked !== null
             ? 'undock__selection__button__connect'
             : 'undock__selection__button__disconnect'
         }`}

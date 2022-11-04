@@ -13,30 +13,28 @@ const dataAccounts = [
   { name: 'motzart.near' },
 ];
 
-const AccountList = ({ name, setAccountChecked, onDisabled }) => {
+const AccountList = ({ name, accountChecked, setAccountChecked, idx }) => {
   const [checked, setChecked] = useState(false);
-
-  const chengeCheckbox = () => {
-    setChecked(!checked);
-    setAccountChecked(!checked);
-  };
 
   return (
     <li
       className="undock__checkbox_box"
       type="checkbox"
-      onClick={
-        onDisabled
-          ? chengeCheckbox
-          : () => {
-              console.log('no click!');
-            }
-      }
+      onClick={() => {
+        accountChecked !== idx
+          ? setAccountChecked(idx)
+          : setAccountChecked(null);
+      }}
+      checked={idx === accountChecked}
     >
       <ReactSVG src={rectangle_write} />
       <ReactSVG
         src={checkmark_white}
-        className={checked ? 'undock__img_write' : 'undock__img_write__display'}
+        className={
+          idx === accountChecked
+            ? 'undock__img_write'
+            : 'undock__img_write__display'
+        }
       />
       <p>{name}</p>
     </li>
