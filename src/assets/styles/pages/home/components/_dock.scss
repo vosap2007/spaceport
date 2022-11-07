@@ -55,6 +55,14 @@
     svg {
       margin-right: 11px;
     }
+
+    p {
+      font-weight: 400;
+      span {
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
   }
 
   &__img {

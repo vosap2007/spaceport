@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ReactSVG } from 'react-svg';
 import rectangle_write from '../../../../assets/images/rectangle_write.svg';
 import checkmark_white from '../../../../assets/images/checkmark-white.svg';
-import arrow from '../../../../assets/images/arrow.svg';
+import road_confirm from '../../../../assets/images/road_confirm.svg';
 
 const dataAccounts = [
   { name: 'NEAR', coin: 'NEAR', balance: '135.00' },
@@ -33,17 +33,17 @@ const Confirm = () => {
       <div className="undock__confirm__table">
         {dataAccounts.map(({ name, coin, balance }) => {
           return (
-            <li className="undock__spaceport__table__line">
-              <div className="undock__spaceport__table__line_left">
-                <div className="undock__spaceport__table__line_left__coin">
-                  <p className="undock__spaceport__table__line_left__coin__name">
+            <li className="undock__confirm__table__line">
+              <div className="undock__confirm__table__line_left">
+                <div className="undock__confirm__table__line_left__coin">
+                  <p className="undock__confirm__table__line_left__coin__name">
                     {name}
                   </p>
-                  <p className="undock__spaceport__table__line_left__coin__sign">
+                  <p className="undock__confirm__table__line_left__coin__sign">
                     {coin}
                   </p>
                 </div>
-                <p className="undock__spaceport__table__line_left__price">
+                <p className="undock__confirm__table__line_left__price">
                   {balance}
                 </p>
               </div>
@@ -51,6 +51,10 @@ const Confirm = () => {
           );
         })}
       </div>
+
+      <p className="undock__confirm__text">
+        Undocking Fee: <span>$X.XX</span>
+      </p>
 
       <div
         className="dock__checkbox_box"
@@ -63,23 +67,21 @@ const Confirm = () => {
           className={checked ? 'dock__img_write' : 'dock__img_write__display'}
         />
         <p>
-          I want to grant full access and transfer all assets to SPACEPORT from
-          the selected account.
+          I confirm that I want to undock my account and transfer the selected
+          assets to <span>account.near</span>
         </p>
       </div>
 
       <button
         className={`dock__account__button ${
-          checked && value.length > 0
+          checked
             ? 'dock__account__button__connect'
             : 'dock__account__button__disconnect'
         }`}
         disabled={checked && value.length > 0 ? false : true}
         type="submit"
-      >
-        Dock Account
-        <ReactSVG src={arrow} />
-      </button>
+      >{`< Confirm Undock >`}</button>
+      <ReactSVG src={road_confirm} className="undock__confirm__road" />
     </div>
   );
 };
