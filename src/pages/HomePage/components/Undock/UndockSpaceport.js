@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ReactSVG } from 'react-svg';
 import arrow from '../../../../assets/images/arrow.svg';
 import road_spaceport from '../../../../assets/images/road_spaceport.svg';
-import AccountList from './AccountList';
+import SpaceportList from './SpaceportList';
 
 const dataAccounts = [
   { name: 'NEAR', coin: 'NEAR', balance: '135.00' },
@@ -12,30 +12,57 @@ const dataAccounts = [
 ];
 
 const UndockSpaceport = () => {
-  const [accountChecked, setAccountChecked] = useState(null);
+  const [accountChecked, setAccountChecked] = useState(false);
 
   return (
-    <div className="undock__selection">
-      <p className="undock__selection__title">Confirm Transfer of Assets</p>
-      <ul className="undock__selection__accounts">
-        {dataAccounts.map(({ name }, idx) => {
+    <div className="undock__spaceport">
+      <p className="undock__spaceport__title">Confirm Transfer of Assets</p>
+      <div className="undock__spaceport__columns">
+        <div className="undock__spaceport__columns__left">
+          <p>Token</p>
+          <p>Balance</p>
+        </div>
+        <p>Transfer Amount</p>
+      </div>
+      <ul className="undock__spaceport__table">
+        {dataAccounts.map(({ name, coin, balance }, idx) => {
           return (
-            <AccountList
+            <SpaceportList
               name={name}
+              coin={coin}
+              balance={balance}
               key={idx}
-              accountChecked={accountChecked}
-              setAccountChecked={setAccountChecked}
               idx={idx}
             />
           );
         })}
       </ul>
 
+      <div
+        className={`undock__spaceport__checkbox ${
+          accountChecked && 'undock__spaceport__checkbox__check'
+        }`}
+        type="checkbox"
+        onClick={() => {
+          setAccountChecked(!accountChecked);
+        }}
+      >
+        <div className="undock__spaceport__write_circle"></div>
+        <div
+          className={
+            accountChecked
+              ? 'undock__spaceport__dark_circle'
+              : 'undock__spaceport__dark_circle__display'
+          }
+        ></div>
+        <p>Transfer All Assets</p>
+      </div>
+
       <button
-        className={`undock__selection__button ${
+        className={`undock__spaceport__button ${
           accountChecked !== null
-            ? 'undock__selection__button__connect'
-            : 'undock__selection__button__disconnect'
+            ? 'undock__spaceport__button__connect'
+            : 'undock__spaceport__button__disconnect'
         }`}
         disabled={accountChecked ? false : true}
         type="submit"
@@ -43,7 +70,7 @@ const UndockSpaceport = () => {
         Next
         <ReactSVG src={arrow} />
       </button>
-      <ReactSVG src={road_spaceport} className="undock__selection__road" />
+      <ReactSVG src={road_spaceport} className="undock__spaceport__road" />
     </div>
   );
 };

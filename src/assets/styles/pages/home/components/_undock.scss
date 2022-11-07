@@ -307,4 +307,236 @@
       left: -25px;
     }
   }
+
+  &__spaceport {
+    position: relative;
+    color: #ffffff;
+
+    &__title {
+      position: relative;
+      margin-bottom: 14px;
+      font-weight: 700;
+      font-size: 18px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        width: 610px;
+        border-bottom: 2px solid $basic;
+      }
+    }
+
+    &__columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 95px;
+      margin-bottom: 6px;
+
+      font-weight: 400;
+      font-size: 14px;
+
+      &__left {
+        display: flex;
+        justify-content: space-between;
+        width: 239px;
+      }
+
+      &__right {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &__table {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 18px;
+
+      &__line {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__line_left {
+        display: flex;
+        justify-content: space-between;
+        width: 239px;
+
+        &__coin {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          gap: 7px;
+
+          &__name {
+            font-weight: 700;
+            font-size: 18px;
+          }
+
+          &__sign {
+            font-weight: 400;
+            font-size: 12px;
+          }
+        }
+
+        &__price {
+          font-weight: 700;
+          font-size: 18px;
+        }
+      }
+
+      &__line_rite {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        &__button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 131px;
+          height: 26px;
+          font-size: 14px;
+          color: #78ded4;
+          border: 2px solid #78ded4;
+          border-radius: 5px;
+          transition: 0.3s all ease-in-out;
+
+          &:hover {
+            background: #78ded4;
+            color: #000000;
+          }
+        }
+
+        &__input {
+          width: 105px;
+          height: 26px;
+          background: #1e1e1e;
+          border-radius: 4px;
+          padding: 3px 4px;
+          font-weight: 700;
+          font-size: 18px;
+          color: #c1c1c1;
+        }
+      }
+    }
+
+    &__text {
+      margin-top: 20px;
+      margin-bottom: 23px;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    &__accounts {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 15px;
+      column-gap: 38px;
+    }
+
+    &__checkbox {
+      position: relative;
+      display: flex;
+      margin-left: auto;
+      align-items: center;
+      gap: 20px;
+      padding: 8px 12px;
+      width: 276px;
+      height: 32px;
+      transition: 0.3s all ease-in-out;
+      border: 2px solid #78ded4;
+      border-radius: 4px;
+
+      font-weight: 400;
+      font-size: 14px;
+
+      &__check {
+        background: rgba(120, 222, 212, 0.35);
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: rgba(120, 222, 212, 0.35);
+      }
+
+      p {
+        max-width: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    &__write_circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+
+    &__dark_circle {
+      position: absolute;
+      left: 14.7px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #000000;
+
+      &__display {
+        display: none;
+      }
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: black;
+      padding: 5px 25px;
+      margin-top: 46px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+      height: 40px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 18px;
+      transition: 0.3s all ease-in-out;
+
+      &__connect {
+        background: #78ded4;
+        border: 2px solid #78ded4;
+
+        &:hover {
+          background: #78ded400;
+          border: 2px solid #78ded4;
+          color: #78ded4;
+
+          svg {
+            path {
+              fill: #78ded4;
+            }
+          }
+        }
+      }
+
+      &__disconnect {
+        background: #8b9493;
+        border: 2px solid #8b9493;
+        cursor: auto;
+      }
+    }
+
+    &__road {
+      position: absolute;
+      bottom: -155px;
+      left: -25px;
+    }
+  }
 }
