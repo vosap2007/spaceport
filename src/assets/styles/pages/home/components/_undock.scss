@@ -539,4 +539,42 @@
       left: -25px;
     }
   }
+
+  &__confirm {
+    color: #ffffff;
+
+    &__title {
+      position: relative;
+      margin-bottom: 17px;
+      font-weight: 700;
+      font-size: 18px;
+
+      span {
+        color: $basic;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        width: 610px;
+        border-bottom: 2px solid $basic;
+      }
+    }
+
+    &__titles_tab {
+      display: flex;
+      justify-content: space-between;
+      width: 282px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+
+    &__table {
+      border: 2px solid #78ded4;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+  }
 }
