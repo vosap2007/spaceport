@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../../../../components/Modal';
 import AccountSelection from './AccountSelection';
 import Confirm from './Confirm';
+import PhraseGenerator from './PhraseGenerator';
 import Processing from './Processing';
 import TermsConditions from './TermsConditions';
 import UndockSpaceport from './UndockSpaceport';
@@ -48,13 +49,15 @@ const Undock = () => {
         // titleModal={'Account Selection'}
         // titleModal={'Undock From SPACEPORT'}
         // titleModal={'Confirm Undocking'}
-        titleModal={'Processing...'}
+        // titleModal={'Processing...'}
+        titleModal={'Undocking your account...'}
       >
         {/* <TermsConditions /> */}
         {/* <AccountSelection /> */}
         {/* <UndockSpaceport /> */}
         {/* <Confirm /> */}
-        <Processing />
+        {/* <Processing /> */}
+        <PhraseGenerator />
       </Modal>
 
       <button
