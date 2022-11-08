@@ -3,8 +3,8 @@ import { ReactSVG } from 'react-svg';
 import arrow from '../../assets/images/arrow.svg';
 
 const Modal = ({ isOpened, setIsOpened, titleModal, children }) => {
-  const [showBack, setShowBack] = useState(true);
-  const [showExit, setShowExit] = useState(true);
+  const [showBack, setShowBack] = useState(false);
+  const [showExit, setShowExit] = useState(false);
 
   isOpened
     ? (document.body.style.overflow = 'hidden')
@@ -25,7 +25,15 @@ const Modal = ({ isOpened, setIsOpened, titleModal, children }) => {
         <ReactSVG src={arrow} />
         Exit Docking Sequence
       </button>
-      <h1 className="modal_wrapper__title">{titleModal}</h1>
+      <h1
+        className={
+          showBack && showExit
+            ? 'modal_wrapper__title'
+            : 'modal_wrapper__title__alone'
+        }
+      >
+        {titleModal}
+      </h1>
       <button
         className={
           showBack ? 'modal_wrapper__go_back' : 'modal_wrapper__go_back_not'

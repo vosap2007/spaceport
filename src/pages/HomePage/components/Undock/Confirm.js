@@ -33,7 +33,7 @@ const Confirm = () => {
       <div className="undock__confirm__table">
         {dataAccounts.map(({ name, coin, balance }) => {
           return (
-            <li className="undock__confirm__table__line">
+            <li className="undock__confirm__table__line" key={balance}>
               <div className="undock__confirm__table__line_left">
                 <div className="undock__confirm__table__line_left__coin">
                   <p className="undock__confirm__table__line_left__coin__name">

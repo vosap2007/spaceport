@@ -57,6 +57,16 @@
     font-size: 40px;
     line-height: 50px;
     color: #000000;
+
+    &__alone {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 50px;
+      color: #000000;
+    }
   }
 
   &__go_back {
