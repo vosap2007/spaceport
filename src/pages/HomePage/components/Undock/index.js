@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../../../../components/Modal';
 import AccountSelection from './AccountSelection';
 import Confirm from './Confirm';
+import EnteringPhrase from './EnteringPhrase';
 import PhraseGenerator from './PhraseGenerator';
 import Processing from './Processing';
 import TermsConditions from './TermsConditions';
@@ -57,7 +58,8 @@ const Undock = () => {
         {/* <UndockSpaceport /> */}
         {/* <Confirm /> */}
         {/* <Processing /> */}
-        <PhraseGenerator />
+        {/* <PhraseGenerator /> */}
+        <EnteringPhrase />
       </Modal>
 
       <button

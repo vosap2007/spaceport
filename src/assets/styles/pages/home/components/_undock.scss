@@ -814,4 +814,93 @@
       }
     }
   }
+  &__entering {
+    color: #ffffff;
+
+    &__title {
+      font-weight: 700;
+      font-size: 18px;
+
+      span {
+        color: #78ded4;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 65px;
+        width: 610px;
+        border-bottom: 2px solid $basic;
+      }
+    }
+
+    &__text {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 18px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &__input {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      margin-bottom: 44px;
+      background: #ffffff;
+      border-radius: 5px;
+      border: none;
+      padding: 6px 11px;
+      width: 200px;
+      height: 36px;
+      font-weight: 400;
+      font-size: 18px;
+      color: #b1b1b1;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: black;
+      padding: 5px 25px;
+      margin-top: 26px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 155px;
+      height: 40px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+      transition: 0.3s all ease-in-out;
+
+      &__connect {
+        background: #78ded4;
+        border: 2px solid #78ded4;
+
+        &:hover {
+          background: #78ded400;
+          border: 2px solid #78ded4;
+          color: #78ded4;
+
+          svg {
+            path {
+              fill: #78ded4;
+            }
+          }
+        }
+      }
+
+      &__disconnect {
+        background: #8b9493;
+        border: 2px solid #8b9493;
+        cursor: auto;
+      }
+    }
+  }
 }
