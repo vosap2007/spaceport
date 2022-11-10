@@ -1095,4 +1095,47 @@
       }
     }
   }
+
+  &__successful {
+    text-align: center;
+    color: #ffffff;
+
+    &__title {
+      position: relative;
+      text-align: left;
+      font-weight: 700;
+      font-size: 18px;
+
+      span {
+        color: #78ded4;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        width: 610px;
+        border-bottom: 2px solid $basic;
+      }
+    }
+
+    &__text {
+      margin-top: 25px;
+      margin-bottom: 18px;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    &__image {
+      display: inline-block;
+    }
+
+    &__docking {
+      margin-top: 11px;
+      margin-bottom: 100px;
+      color: #78ded4;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
 }

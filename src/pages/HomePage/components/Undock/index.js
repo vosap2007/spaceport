@@ -9,6 +9,7 @@ import PhraseGenerator from './PhraseGenerator';
 import Processing from './Processing';
 import SecondStep from './SecondStep';
 import TermsConditions from './TermsConditions';
+import UndockingSuccessful from './UndockingSuccessful';
 import UndockSpaceport from './UndockSpaceport';
 
 const Undock = () => {
@@ -56,7 +57,8 @@ const Undock = () => {
         // titleModal={'Processing...'}
         // titleModal={'Undocking your account...'}
         // titleModal={'Enable Passphrase on your account.'}
-        titleModal={'Confirm you have secured your wallet'}
+        // titleModal={'Confirm you have secured your wallet'}
+        titleModal={'Undocking Successful'}
       >
         {/* <TermsConditions /> */}
         {/* <AccountSelection /> */}
@@ -67,7 +69,8 @@ const Undock = () => {
         {/* <EnteringPhrase /> */}
         {/* <FirstStep /> */}
         {/* <SecondStep /> */}
-        <ConfirmWallet />
+        {/* <ConfirmWallet /> */}
+        <UndockingSuccessful />
       </Modal>
 
       <button
