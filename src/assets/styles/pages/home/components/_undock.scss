@@ -653,14 +653,6 @@
       }
       padding-bottom: 5px;
       border-bottom: 2px solid $basic;
-
-      // &::before {
-      //   content: '';
-      //   position: absolute;
-      //   top: 30px;
-      //   width: 610px;
-      //   border-bottom: 2px solid $basic;
-      // }
     }
 
     &__text {
@@ -1018,6 +1010,88 @@
             }
           }
         }
+      }
+    }
+  }
+
+  &__wallet {
+    color: #ffffff;
+
+    &__title {
+      font-weight: 700;
+      font-size: 18px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 65px;
+        width: 610px;
+        border-bottom: 2px solid $basic;
+      }
+    }
+
+    &__text {
+      margin-top: 38px;
+      margin-bottom: 73px;
+      font-weight: 400;
+      font-size: 24px;
+    }
+
+    &__input {
+      margin-top: 20px;
+      margin-bottom: 38px;
+      background: #353535;
+      border-radius: 4px;
+      border: none;
+      padding: 6px 11px;
+      width: 100%;
+      height: 80px;
+      resize: none;
+      font-family: 'Bai Jamjuree';
+      font-weight: 400;
+      font-size: 18px;
+      color: #b1b1b1;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: black;
+      padding: 5px 25px;
+      margin-top: 73px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+      height: 40px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 18px;
+      transition: 0.3s all ease-in-out;
+
+      &__connect {
+        background: #78ded4;
+        border: 2px solid #78ded4;
+
+        &:hover {
+          background: #78ded400;
+          border: 2px solid #78ded4;
+          color: #78ded4;
+
+          svg {
+            path {
+              fill: #78ded4;
+            }
+          }
+        }
+      }
+
+      &__disconnect {
+        background: #8b9493;
+        border: 2px solid #8b9493;
+        cursor: auto;
       }
     }
   }

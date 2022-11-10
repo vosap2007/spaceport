@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../../../../components/Modal';
 import AccountSelection from './AccountSelection';
 import Confirm from './Confirm';
+import ConfirmWallet from './ConfirmWallet';
 import EnteringPhrase from './EnteringPhrase';
 import FirstStep from './FirstStep';
 import PhraseGenerator from './PhraseGenerator';
@@ -54,7 +55,8 @@ const Undock = () => {
         // titleModal={'Confirm Undocking'}
         // titleModal={'Processing...'}
         // titleModal={'Undocking your account...'}
-        titleModal={'Enable Passphrase on your account.'}
+        // titleModal={'Enable Passphrase on your account.'}
+        titleModal={'Confirm you have secured your wallet'}
       >
         {/* <TermsConditions /> */}
         {/* <AccountSelection /> */}
@@ -64,7 +66,8 @@ const Undock = () => {
         {/* <PhraseGenerator /> */}
         {/* <EnteringPhrase /> */}
         {/* <FirstStep /> */}
-        <SecondStep />
+        {/* <SecondStep /> */}
+        <ConfirmWallet />
       </Modal>
 
       <button
