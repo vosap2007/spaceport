@@ -5,6 +5,7 @@ import Confirm from './Confirm';
 import ConfirmWallet from './ConfirmWallet';
 import EnteringPhrase from './EnteringPhrase';
 import FirstStep from './FirstStep';
+import GoodLuck from './GoodLuck';
 import PhraseGenerator from './PhraseGenerator';
 import Processing from './Processing';
 import SecondStep from './SecondStep';
@@ -58,7 +59,7 @@ const Undock = () => {
         // titleModal={'Undocking your account...'}
         // titleModal={'Enable Passphrase on your account.'}
         // titleModal={'Confirm you have secured your wallet'}
-        titleModal={'Undocking Successful'}
+        // titleModal={'Undocking Successful'}
       >
         {/* <TermsConditions /> */}
         {/* <AccountSelection /> */}
@@ -70,7 +71,8 @@ const Undock = () => {
         {/* <FirstStep /> */}
         {/* <SecondStep /> */}
         {/* <ConfirmWallet /> */}
-        <UndockingSuccessful />
+        {/* <UndockingSuccessful /> */}
+        <GoodLuck />
       </Modal>
 
       <button
