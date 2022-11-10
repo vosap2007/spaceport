@@ -6,6 +6,7 @@ import EnteringPhrase from './EnteringPhrase';
 import FirstStep from './FirstStep';
 import PhraseGenerator from './PhraseGenerator';
 import Processing from './Processing';
+import SecondStep from './SecondStep';
 import TermsConditions from './TermsConditions';
 import UndockSpaceport from './UndockSpaceport';
 
@@ -62,7 +63,8 @@ const Undock = () => {
         {/* <Processing /> */}
         {/* <PhraseGenerator /> */}
         {/* <EnteringPhrase /> */}
-        <FirstStep />
+        {/* <FirstStep /> */}
+        <SecondStep />
       </Modal>
 
       <button
