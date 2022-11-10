@@ -3,6 +3,7 @@ import Modal from '../../../../components/Modal';
 import AccountSelection from './AccountSelection';
 import Confirm from './Confirm';
 import EnteringPhrase from './EnteringPhrase';
+import FirstStep from './FirstStep';
 import PhraseGenerator from './PhraseGenerator';
 import Processing from './Processing';
 import TermsConditions from './TermsConditions';
@@ -51,7 +52,8 @@ const Undock = () => {
         // titleModal={'Undock From SPACEPORT'}
         // titleModal={'Confirm Undocking'}
         // titleModal={'Processing...'}
-        titleModal={'Undocking your account...'}
+        // titleModal={'Undocking your account...'}
+        titleModal={'Enable Passphrase on your account.'}
       >
         {/* <TermsConditions /> */}
         {/* <AccountSelection /> */}
@@ -59,7 +61,8 @@ const Undock = () => {
         {/* <Confirm /> */}
         {/* <Processing /> */}
         {/* <PhraseGenerator /> */}
-        <EnteringPhrase />
+        {/* <EnteringPhrase /> */}
+        <FirstStep />
       </Modal>
 
       <button
